@@ -1,6 +1,82 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/dark_bg"
+    android:orientation="horizontal"
+    android:padding="24dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingEnd="16dp">
+
+        <TextView
+            android:id="@+id/tvSapaan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Panel Dosen"
+            android:textColor="@color/gold"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <EditText
+            android:id="@+id/etJumlahMahasiswa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Jml Mahasiswa"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey_hint"
+            android:backgroundTint="@color/gold"/>
+
+        <EditText
+            android:id="@+id/etRataRataNilai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Rata-rata Nilai"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grey_hint"
+            android:backgroundTint="@color/gold"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnProsesData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PROSES"
+            android:textColor="@color/dark_bg"
+            android:backgroundTint="@color/gold"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingStart="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvStatusKelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="STATUS: -"
+                android:textColor="@color/gold"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginBottom="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDaftarAbsen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hasil..."
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
